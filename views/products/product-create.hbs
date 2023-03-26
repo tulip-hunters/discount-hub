@@ -1,0 +1,40 @@
+<h1>Product create page</h1>
+
+<form method="POST" action="/products">
+
+    <label> Name:
+        <input type="text" name="name" />
+    </label>
+
+    <select name="shop"> Shop:
+        <input type="object" name="{{shop.name}}" />{{shop.name}}
+          {{!-- {{#each shops}}
+            <option value={{this._id}}>{{this.name}}</option>
+        {{/each}} --}}
+    </select>
+
+{{!-- 
+    <label> Shops:
+        <textarea name="shop" > </textarea>
+    </label> --}}
+
+
+    <label> Description:
+        <textarea name="description" cols="30" rows="4"> </textarea>
+    </label>
+
+ <label> expirationDate:
+        <textarea name="expirationDate" type="date"> </textarea>
+    </label>
+
+
+    <label> fullPrice:
+        <input type="number" name="fullPrice" />
+    </label>
+
+  <label> discountPrice:
+        <input type="number" name="discountPrice" />
+    </label>
+
+    <button type="submit"> Create </button>
+</form>
