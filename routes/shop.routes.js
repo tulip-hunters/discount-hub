@@ -4,7 +4,7 @@ const Shop = require('../models/Shop.model');
 const router = express.Router();
 
 // GET /shops
-router.get("/shops-list", (req, res, next) => {
+router.get("/shops", (req, res, next) => {
     Shop.find()
         .then( shopsArr => {
 
