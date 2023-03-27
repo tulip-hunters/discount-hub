@@ -16,17 +16,17 @@
 
 
     <label> Regular price:
-        <input type="number" name="fullPrice" />
+        <input type="number" name="fullPrice" min="0.00" />
     </label>
 
     <label> Price after discount:
-        <input type="number" name="discountPrice" />
+        <input type="number" name="discountPrice" min="0.00" />
     </label>
 
     <label> Select a shop:
-        <select name="shop" id="enum">
-            {{#each product.shop.enum}}
-            <option value="{{this.id}}">{{this.name}}</option>
+        <select name="shop">
+            {{#each shops}}
+                <option value={{this._id}}>{{this.name}}</option>
             {{/each}}
         </select>
     </label>
