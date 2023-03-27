@@ -12,9 +12,10 @@ const productSchema = new Schema(
             enum: ['food', 'non-food' ],
         },
         shop: {
-            type: String,
-            enum: ['Albert Hijn', 'Aldi', 'Coop', 'Deka Markt', 'Dirk', 'Ekoplaza', 'Jumbo', 'Lidl', 'Marqt', 'Spar', 'Vommar', 'other' ],
+            type: Schema.Types.ObjectId,
+            ref: 'Shop'
         }
+
     },
     {
         timestamps: true
