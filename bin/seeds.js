@@ -6,8 +6,8 @@ const products = [
     {
         name: "Ariel",
         description: "laundry gel",
-        fullPrice: 7.8,
-        discountPrice: 5.9,
+        fullPrice: 7,
+        discountPrice: 5,
         expirationDate: 12-12-2023,
         tags: {enum: 'non-food'},
         shop: "Dirk",
@@ -15,8 +15,8 @@ const products = [
     {
         name: "Broccoli",
         description: "green vegetable",
-        fullPrice: 2.8,
-        discountPrice: 1.9,
+        fullPrice: 2,
+        discountPrice: 1,
         expirationDate: 01-05-2023,
         tags: {enum: 'food'},
         shop: "Lidl",
@@ -24,8 +24,8 @@ const products = [
     {
         name: "Croissant",
         description: "lekker",
-        fullPrice: 1.0,
-        discountPrice: 0.75,
+        fullPrice: 4,
+        discountPrice: 2,
         expirationDate: 10-04-2023,
         tags: {enum: 'food'},
         shop: "Aldi",
