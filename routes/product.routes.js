@@ -61,4 +61,79 @@ router.post("/products", (req, res, next) => {
     });
 });
 
+////////////////////////////////
+
+//READ: book details
+router.get("/products/:productId", (req, res, next) => {
+
+  const { productId } = req.params;
+
+  Product.findById(productId)
+    .populate("shop")
+    .then(productDetails => {
+
+      console.log(productDetails)
+
+      res.render("products/product-details", productDetails);
+    })
+    .catch(e => {
+      console.log("Error loading the product page.", e);
+      next(e);
+    });
+
+});
+
+
+
+//UPDATE: display form
+router.get('/products/:productId/edit', (req, res, next) => {
+  const { productId } = req.params;
+
+  let productDetails;
+
+  Product.findById(productId)
+    .then(productFromDB => {
+      productDetails = productFromDB; //update variable in the parent scope
+      return Shop.find(); //get list of shops
+    })
+    .then( shopsArr => {
+
+      const data = { 
+        product: productDetails,
+        shops: shopsArr
+      }
+
+      res.render('products/product-edit.hbs', data);
+    } )
+    .catch(error => next(error));
+});
+
+
+
+//UPDATE: process form
+router.post('/products/:productId/edit', (req, res, next) => {
+  const { productId } = req.params;
+  const { name, description, fullPrice, discountPrice, expirationDate, tags, shop } = req.body;
+
+  Product.findByIdAndUpdate(productId, { name, description, fullPrice, discountPrice, expirationDate, tags, shop}, { new: true })
+    .then(updatedProduct => {
+      res.redirect(`/products/${updatedProduct.id}`); //redirect to products details page
+    })
+    .catch(error => next(error));
+});
+
+
+
+//DELETE
+router.post('/products/:productId/delete', (req, res, next) => {
+  const { productId } = req.params;
+
+  Product.findByIdAndDelete(productId)
+    .then(() => res.redirect('/products'))
+    .catch(error => next(error));
+});
+
+
+////////////////////////////////////////
+
 module.exports = router;

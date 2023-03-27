@@ -34,7 +34,8 @@ const products = [
 
 const shops = [
     {
-        name: "Aldi"
+        name: "Aldi",
+        image: "../public/images/Aldi.png"
     },
     {
         name: "Albert Hijn"

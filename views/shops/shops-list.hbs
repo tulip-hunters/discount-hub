@@ -1,6 +1,13 @@
 <h1>Shops list page</h1>
 
-
+{{#each shops}}
+    <section>
+        <h2>{{this.name}}</h2>
+    
+        <img src="{{this.image}}" alt="{{this.name}}" />
+     
+    </section>
+{{/each}}
 
 
 
