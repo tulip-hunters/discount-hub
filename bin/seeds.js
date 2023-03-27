@@ -9,7 +9,7 @@ const products = [
         fullPrice: 7,
         discountPrice: 5,
         expirationDate: 12-12-2023,
-        tags: {enum: 'non-food'},
+        tags: 'non-food',
         shop: "Dirk",
     }, 
     {
@@ -18,7 +18,7 @@ const products = [
         fullPrice: 2,
         discountPrice: 1,
         expirationDate: 01-05-2023,
-        tags: {enum: 'food'},
+        tags: 'food',
         shop: "Lidl",
     },
     {
@@ -27,7 +27,7 @@ const products = [
         fullPrice: 4,
         discountPrice: 2,
         expirationDate: 10-04-2023,
-        tags: {enum: 'food'},
+        tags: 'food',
         shop: "Aldi",
     },
 ];
@@ -104,7 +104,6 @@ async function seedData() {
             const newProduct = {
                 title: productObj.title,
                 description: productObj.description,
-                rating: productObj.rating,
                 shop: shopId
             }
 

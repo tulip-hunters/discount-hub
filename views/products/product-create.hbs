@@ -16,11 +16,20 @@
 
 
     <label> Regular price:
-        <input type="number" name="fullPrice" min="0.00" />
+        <input type="number" name="fullPrice" min="0.00" step=".01" />
     </label>
 
     <label> Price after discount:
-        <input type="number" name="discountPrice" min="0.00" />
+        <input type="number" name="discountPrice" min="0.00" step=".01" />
+    </label>
+
+    <label> Select a tag:
+     
+      
+                <input type="radio" value="food" name="tags">
+                <label for="html">food</label>
+    
+        
     </label>
 
     <label> Select a shop:
@@ -30,14 +39,6 @@
             {{/each}}
         </select>
     </label>
-    {{!-- {{#each shops}}
-    <option value={{this._id}}>{{this.name}}</option>
-    {{/each}}
-    </select> --}}
-    {{!--
-    <label> Shops:
-        <textarea name="shop"> </textarea>
-    </label> --}}
 
 
     <button type="submit"> Create </button>
