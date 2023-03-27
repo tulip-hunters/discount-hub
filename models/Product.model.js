@@ -13,7 +13,7 @@ const productSchema = new Schema(
         },
         shop: {
             type: String,
-            enum: ['Albert Hijn', 'Aldi', 'Lidl', 'Jumbo', 'Deka Markt', 'Vommar', 'Dirk', 'Coop', 'Ekoplaza', 'Spar', 'Marqt', 'other' ],
+            enum: ['Albert Hijn', 'Aldi', 'Coop', 'Deka Markt', 'Dirk', 'Ekoplaza', 'Jumbo', 'Lidl', 'Marqt', 'Spar', 'Vommar', 'other' ],
         }
     },
     {
