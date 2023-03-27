@@ -63,14 +63,14 @@ router.post("/products", (req, res, next) => {
 
 ////////////////////////////////
 
-//READ: book details
+//READ: product details
 router.get("/products/:productId", (req, res, next) => {
 
   const { productId } = req.params;
 
   Product.findById(productId)
     .populate("shop")
-    .then(productDetails => {
+    .then( productDetails => {
 
       console.log(productDetails)
 
