@@ -2,39 +2,43 @@
 
 <form method="POST" action="/products">
 
-    <label> Name:
+    <label> Product name:
         <input type="text" name="name" />
     </label>
-
-    <select name="shop"> Shop:
-        <input type="object" name="{{shop.name}}" />{{shop.name}}
-          {{!-- {{#each shops}}
-            <option value={{this._id}}>{{this.name}}</option>
-        {{/each}} --}}
-    </select>
-
-{{!-- 
-    <label> Shops:
-        <textarea name="shop" > </textarea>
-    </label> --}}
-
 
     <label> Description:
         <textarea name="description" cols="30" rows="4"> </textarea>
     </label>
 
- <label> expirationDate:
+    <label> Discount valid until:
         <textarea name="expirationDate" type="date"> </textarea>
     </label>
 
 
-    <label> fullPrice:
+    <label> Regular price:
         <input type="number" name="fullPrice" />
     </label>
 
-  <label> discountPrice:
+    <label> Price after discount:
         <input type="number" name="discountPrice" />
     </label>
+
+    <label> Select a shop:
+        <select name="shop" id="enum">
+            {{#each product.shop.enum}}
+            <option value="{{this.id}}">{{this.id}}</option>
+            {{/each}}
+        </select>
+    </label>
+    {{!-- {{#each shops}}
+    <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+    </select> --}}
+    {{!--
+    <label> Shops:
+        <textarea name="shop"> </textarea>
+    </label> --}}
+
 
     <button type="submit"> Create </button>
 </form>
