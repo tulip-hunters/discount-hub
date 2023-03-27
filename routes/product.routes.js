@@ -2,7 +2,7 @@ const express = require("express");
 const Product = require("../models/Product.model");
 const Shop = require("../models/Shop.model");
 
-const isUserLoggedIn = require("../middleware/isLoggedIn");
+const isLoggedIn = require("../middleware/isLoggedIn");
 
 const router = express.Router();
 
@@ -46,6 +46,7 @@ router.post("/products", (req, res, next) => {
     name: req.body.name,
     description: req.body.description,
     fullPrice: req.body.fullPrice,
+    discountPrice: req.body.discountPrice,
     expirationDate: req.body.expirationDate,
     tags: req.body.tags,
     shop: req.body.shop,
