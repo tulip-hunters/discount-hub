@@ -102,11 +102,14 @@ async function seedData() {
             const shopId = shopDetails._id;
 
             const newProduct = {
-                title: productObj.title,
+                name: productObj.name,
                 description: productObj.description,
-                shop: shopId
+                shop: shopId,
+                fullPrice: productObj.fullPrice,
+                discountPrice: productObj.discountPrice,
+                expirationDate: productObj.expirationDate,
+                tags: productObj.tags,
             }
-
             productsWithIds.push(newProduct);
         }
 

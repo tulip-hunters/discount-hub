@@ -1,1 +1,24 @@
 <h1>Products list page</h1>
+
+{{#each products}}
+    <section>
+        <h2>{{this.name}}</h2>
+        <p>
+            Shop: {{this.shop.name}} <br />
+            Description: {{this.description}} <br />
+            Regular Price: {{this.fullPrice}} <br />
+            Price after discount: {{this.discountPrice}} <br />
+            Valid until: {{this.expirationDate}} <br />
+            Cathegory: {{this.tags}} <br />
+
+
+            {{!-- <a href="/books/{{this._id}}">More details</a>
+            <a href="/books/{{this._id}}/edit">Edit</a> --}}
+        </p>
+
+        {{!-- <form action="/books/{{_id}}/delete" method="POST">
+            <button>Delete</button>
+        </form> --}}
+
+    </section>
+{{/each}}
