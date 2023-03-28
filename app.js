@@ -21,11 +21,26 @@ require("./config")(app);
 const capitalize = require("./utils/capitalize");
 const projectName = "discount-hub";
 
+
 app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
 
 // 👇 Start handling routes here
+// const indexRoutes = require("./routes/index.routes");
+// app.use("/", indexRoutes);
+
+
+const loggedInCheck = (req,res, next) => {
+    res.locals.currentUser = req.session.currentUser;
+    next()
+}
+
 const indexRoutes = require("./routes/index.routes");
 app.use("/", indexRoutes);
+
+app.use("/", loggedInCheck, require("./routes/index.routes"));
+app.use("/", loggedInCheck, require("./routes/auth.routes"));
+app.use("/", loggedInCheck, require("./routes/shop.routes"));
+app.use("/", loggedInCheck, require("./routes/product.routes"));
 
 
 app.use("/", require("./routes/shop.routes"));

@@ -12,6 +12,48 @@
 
           <header>
          <nav>
+              
+            <a href="/">Home</a>
+            <a href="/products">Products</a>
+            <a href="/product/create">Create new product</a>
+            <a href="/shops">Shops</a>
+
+           {{#if currentUser}}
+            <span>Hello, {{currentUser.username}}</span>
+
+              <form method="POST" action="/logout">
+               <button>Logout</button>
+            </form>
+          {{else}}
+            <a href="/signup">Register</a>
+             <a href="/login">Login</a>
+          {{/if}}
+         </nav>
+      </header>
+
+    {{{body}}}
+
+    <script src="/js/script.js"></script>
+  </body>
+
+</html>
+
+
+
+{{!-- <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{appTitle}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body>
+
+          <header>
+         <nav>
             <a href="/">Home</a>
             <a href="/products">Products</a>
             <a href="/product/create">Create new product</a>
@@ -31,4 +73,4 @@
     <script src="/js/script.js"></script>
   </body>
 
-</html>
+</html> --}}
