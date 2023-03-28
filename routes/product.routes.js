@@ -24,7 +24,7 @@ router.get("/products", (req, res, next) => {
 });
 
 //CREATE: display form
-router.get("/product/create", (req, res, next) => {
+router.get("/product/create",isLoggedIn , (req, res, next) => {
 
   Shop.find()
     .then( shopsArr => {
@@ -42,7 +42,7 @@ router.get("/product/create", (req, res, next) => {
 });
 
 //create product process form
-router.post("/products", (req, res, next) => {
+router.post("/products",isLoggedIn , (req, res, next) => {
   const productDetails = {
     name: req.body.name,
     description: req.body.description,
@@ -87,7 +87,7 @@ router.get("/products/:productId", (req, res, next) => {
 
 
 //UPDATE: display form
-router.get('/products/:productId/edit', (req, res, next) => {
+router.get('/products/:productId/edit',isLoggedIn, (req, res, next) => {
   const { productId } = req.params;
 
   let productDetails;
@@ -112,7 +112,7 @@ router.get('/products/:productId/edit', (req, res, next) => {
 
 
 //UPDATE: process form
-router.post('/products/:productId/edit', (req, res, next) => {
+router.post('/products/:productId/edit',isLoggedIn, (req, res, next) => {
   const { productId } = req.params;
   const { name, description, fullPrice, discountPrice, expirationDate, tags, shop } = req.body;
 
@@ -126,7 +126,7 @@ router.post('/products/:productId/edit', (req, res, next) => {
 
 
 //DELETE
-router.post('/products/:productId/delete', (req, res, next) => {
+router.post('/products/:productId/delete',isLoggedIn, (req, res, next) => {
   const { productId } = req.params;
 
   Product.findByIdAndDelete(productId)
