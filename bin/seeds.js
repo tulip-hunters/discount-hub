@@ -46,7 +46,7 @@ const shops = [
     },
     {
         name: "Coop",
-        image: "",
+        image: "coop.png",
         link: "https://www.coop.nl/",
     },
     {
@@ -56,7 +56,7 @@ const shops = [
     },
     {
         name: "Deka Markt",
-        image: "",
+        image: "dekamarkt.webp",
         link: "https://www.dekamarkt.nl/",
     },
     {
@@ -91,7 +91,7 @@ const shops = [
     },
     {
         name: "other",
-        image: "",
+        image: "other.png",
         link: "https://www.ironhack.com/",
     },
 ];
