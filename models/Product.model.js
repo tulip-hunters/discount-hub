@@ -1,5 +1,7 @@
 const { Schema, model } = require("mongoose");
 
+
+
 const productSchema = new Schema( 
     {   imageUrl: String ,
         name: {
@@ -18,7 +20,6 @@ const productSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: 'Shop'
         }
-
     },
     {
         timestamps: true
