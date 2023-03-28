@@ -7,6 +7,8 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 
 const router = express.Router();
 
+const fileUploader = require('../config/cloudinary.config');
+
 //READ: list of products
 router.get("/products", (req, res, next) => {
   Product.find()
@@ -42,8 +44,10 @@ router.get("/product/create",isLoggedIn , (req, res, next) => {
 });
 
 //create product process form
-router.post("/products",isLoggedIn , (req, res, next) => {
+router.post("/products" ,fileUploader.single('imageUrl'),isLoggedIn , (req, res, next) => {
+
   const productDetails = {
+    imageUrl: req.file.path,
     name: req.body.name,
     description: req.body.description,
     fullPrice: req.body.fullPrice,
@@ -112,9 +116,9 @@ router.get('/products/:productId/edit',isLoggedIn, (req, res, next) => {
 
 
 //UPDATE: process form
-router.post('/products/:productId/edit',isLoggedIn, (req, res, next) => {
+router.post('/products/:productId/edit', isLoggedIn, (req, res, next) => {
   const { productId } = req.params;
-  const { name, description, fullPrice, discountPrice, expirationDate, tags, shop } = req.body;
+  const { name, description, fullPrice, discountPrice, expirationDate, tags, shop} = req.body;
 
   Product.findByIdAndUpdate(productId, { name, description, fullPrice, discountPrice, expirationDate, tags, shop}, { new: true })
     .then(updatedProduct => {

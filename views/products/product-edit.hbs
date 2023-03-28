@@ -1,6 +1,6 @@
 <h1>Edit the product: {{product.name}}</h1>
 
-<form action="/products/{{product._id}}/edit" method="post">
+<form action="/products/{{product._id}}/edit" method="post" enctype="multipart/form-data">
     <label> Name:
         <input type="text" name="name" value="{{product.name}}" required />
     </label>
@@ -35,6 +35,13 @@
                 {{/each}}
             </select>
         </label>
+
+
+      <label>Upload file
+           <input type="file" name="imageUrl" />
+           {{!-- <input type="text" name="existingImage" hidden value="{{imageUrl}}"> --}}
+      </label>
+
 
         <button>Save changes</button>
 </form>
