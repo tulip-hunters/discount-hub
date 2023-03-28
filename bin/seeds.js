@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Shop = require('../models/Shop.model');
 const Product = require('../models/Product.model');
 
+
 const products = [
     {
         name: "Ariel",
@@ -35,40 +36,63 @@ const products = [
 const shops = [
     {
         name: "Aldi",
-        image: "../public/images/Aldi.png"
+        image: "public/images/Aldi.png",
+        link: "https://www.aldi.nl/"
     },
     {
-        name: "Albert Hijn"
+        name: "Albert Hijn",
+        image: "/public/images/Albert_Heijn_Logo.png",
+        link: "https://www.ah.nl/",
     },
     {
-        name: "Coop"
+        name: "Coop",
+        image: "Aldi.png",
+        link: "https://www.coop.nl/",
     },
     {
-        name: "Dirk"
+        name: "Dirk",
+        image: "Aldi.png",
+        link: "https://www.dirk.nl/",
     },
     {
-        name: "Deka Markt"
+        name: "Deka Markt",
+        image: "Aldi.png",
+        link: "https://www.dekamarkt.nl/",
     },
     {
-        name: "Jumbo"
+        name: "Jumbo",
+        image: "Aldi.png",
+        link: "https://www.jumbo.com/",
     },
     {
-        name: "Lidl"
+        name: "Lidl",
+        image: "Aldi.png",
+        link: "https://www.lidl.nl/",
     },
     {
-        name: "Ekoplaza"
+        name: "Ekoplaza",
+        image: "Aldi.png",
+        link: "https://www.ekoplaza.nl/",
     },
     {
-        name: "Marqt"
+        name: "Marqt",
+        image: "Aldi.png",
+        link: "https://www.marqt.nl/",
     },
     {
-        name: "Spar"
+        name: "Spar",
+        image: "Aldi.png",
+        link: "https://www.spar.nl/",
     },
     {
-        name: "Vomaar"
+        name: "Vomar",
+        image: "Aldi.png",
+        link: "https://www.vomar.nl/",
     },
     {
-        name: "other"
+        name: "other",
+        image: "Aldi.png",
+        link: "https://www.ironhack.com/",
     },
 ];
 

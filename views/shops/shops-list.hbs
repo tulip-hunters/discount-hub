@@ -1,12 +1,13 @@
 <h1>Shops list page</h1>
 
 {{#each shops}}
-    <section>
-        <h2>{{this.name}}</h2>
-    
-        <img src="{{this.image}}" alt="{{this.name}}" />
-     
-    </section>
+  <section>
+    <h2>{{this.name}}</h2>
+    {{!-- <a href="{{this.link}}"> --}}
+      <img src="/public/images/{{this.image}}" alt="{{this.name}}">
+    {{!-- </a> --}}
+    <p><a href="{{this.link}}">{{this.link}}</a></p>
+  </section>
 {{/each}}
 
 

@@ -4,6 +4,7 @@ const shopSchema = new Schema(
     {
         name: String,
         image: String,
+        link: String,
         
     },
     {
