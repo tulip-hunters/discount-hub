@@ -1,7 +1,24 @@
 <h1>Products list page</h1>
+<div class="container">
+<div class="row">
 
 {{#each products}}
-    <section>
+<div class="col-12 col-md-6 col-lg-4 col-xl-3">
+    <div class="card">
+  <img src="{{this.imageUrl}}" class="card-img-top" alt="product image">
+  <div class="card-body">
+    <h5 class="card-title">{{this.shop.name}} </h5>
+    <p class="card-text">{{this.description}} </p>
+    <p class="card-text fw-light">Regular Price: € {{this.fullPrice}}</p>
+    <p class="card-text fw-bold">Price after discount: € {{this.discountPrice}}</p>
+    <p class="card-text">Valid until: {{this.expirationDate}} </p>
+    <p class="card-text"> Cathegory: {{this.tags}} </p>
+    <a href="/products/{{this._id}}" class="btn btn-primary">More details</a>
+  </div>
+</div>
+</div>
+
+    {{!-- <section>
         <h2>{{this.name}}</h2>
         <p>
             Shop: {{this.shop.name}} <br />
@@ -10,11 +27,14 @@
             Price after discount: {{this.discountPrice}} <br />
             Valid until: {{this.expirationDate}} <br />
             Cathegory: {{this.tags}} <br />
-            image: <img src=" {{this.imageUrl}}" alt="producr image"/>
+            image: <img src=" {{this.imageUrl}}" alt="product image"/>
 
             <a href="/products/{{this._id}}">More details</a>
         
         </p>
 
-    </section>
+    </section> --}}
 {{/each}}
+
+</div>
+</div>
