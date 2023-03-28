@@ -43,8 +43,8 @@ app.use("/", loggedInCheck, require("./routes/shop.routes"));
 app.use("/", loggedInCheck, require("./routes/product.routes"));
 
 
-app.use("/", require("./routes/shop.routes"));
-app.use("/", require("./routes/product.routes"));
+// app.use("/", require("./routes/shop.routes"));
+// app.use("/", require("./routes/product.routes"));
 
 
 const authRoutes = require("./routes/auth.routes");
