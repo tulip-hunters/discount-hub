@@ -2,6 +2,7 @@ const express = require("express");
 const Product = require("../models/Product.model");
 const Shop = require("../models/Shop.model");
 
+const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
 const router = express.Router();
