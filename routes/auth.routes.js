@@ -56,15 +56,15 @@ router.post("/signup", isLoggedOut, (req, res) => {
   */
 
   // Create a new user - start by hashing the password
-  bcrypt
+  bcryptjs
     .genSalt(saltRounds)
-    .then((salt) => bcrypt.hash(password, salt))
+    .then((salt) => bcryptjs.hash(password, salt))
     .then((hashedPassword) => {
       // Create a user and save it in the database
       return User.create({ username, email, password: hashedPassword });
     })
     .then((user) => {
-      res.redirect("/auth/login");
+      res.redirect("/login");
     })
     .catch((error) => {
       if (error instanceof mongoose.Error.ValidationError) {
@@ -86,7 +86,7 @@ router.get("/login", isLoggedOut, (req, res) => {
 });
 
 // POST /auth/login
-router.post("/login", isLoggedOut, (req, res, next) => {
+router.post("/auth/login", isLoggedOut, (req, res, next) => {
   const { username, email, password } = req.body;
 
   // Check that username, email, and password are provided
