@@ -141,7 +141,7 @@ router.post("/auth/login", isLoggedOut, (req, res, next) => {
     .catch((err) => next(err));
 });
 
-// GET /auth/logout
+// POST /auth/logout
 router.post("/logout", isLoggedIn, (req, res) => {
   req.session.destroy((err) => {
     if (err) {
