@@ -29,7 +29,7 @@ app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
 // app.use("/", indexRoutes);
 
 
-const checkLoggIn = (req,res, next) => {
+const loggedInCheck = (req,res, next) => {
     res.locals.currentUser = req.session.currentUser;
     next()
 }
@@ -37,12 +37,12 @@ const checkLoggIn = (req,res, next) => {
 const indexRoutes = require("./routes/index.routes");
 app.use("/", indexRoutes);
 
-app.use("/", checkLoggIn, require("./routes/index.routes"));
-app.use("/", checkLoggIn, require("./routes/auth.routes"));
-app.use("/", checkLoggIn, require("./routes/shop.routes"));
-app.use("/", checkLoggIn, require("./routes/product.routes"));
+app.use("/", loggedInCheck, require("./routes/index.routes"));
+app.use("/", loggedInCheck, require("./routes/auth.routes"));
+app.use("/", loggedInCheck, require("./routes/shop.routes"));
+app.use("/", loggedInCheck, require("./routes/product.routes"));
 
-////////////////////////////////////////////////
+
 app.use("/", require("./routes/shop.routes"));
 app.use("/", require("./routes/product.routes"));
 
