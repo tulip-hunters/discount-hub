@@ -66,8 +66,6 @@ router.post("/products" ,fileUploader.single('imageUrl'),isLoggedIn , (req, res,
     });
 });
 
-////////////////////////////////
-
 //READ: product details
 router.get("/products/:productId", (req, res, next) => {
 
@@ -108,7 +106,7 @@ router.get('/products/:productId/edit',isLoggedIn, (req, res, next) => {
         shops: shopsArr
       }
 
-      res.render('products/product-edit.hbs', data);
+      res.render('products/product-edit', data);
     } )
     .catch(error => next(error));
 });
@@ -118,9 +116,9 @@ router.get('/products/:productId/edit',isLoggedIn, (req, res, next) => {
 //UPDATE: process form
 router.post('/products/:productId/edit', isLoggedIn, (req, res, next) => {
   const { productId } = req.params;
-  const { name, description, fullPrice, discountPrice, expirationDate, tags, shop} = req.body;
+  const { name, description, fullPrice, discountPrice, expirationDate, tags, shop } = req.body;
 
-  Product.findByIdAndUpdate(productId, { name, description, fullPrice, discountPrice, expirationDate, tags, shop}, { new: true })
+  Product.findByIdAndUpdate(productId, { name, description, fullPrice, discountPrice, expirationDate, tags, shop }, { new: true })
     .then(updatedProduct => {
       res.redirect(`/products/${updatedProduct.id}`); //redirect to products details page
     })
@@ -137,8 +135,5 @@ router.post('/products/:productId/delete',isLoggedIn, (req, res, next) => {
     .then(() => res.redirect('/products'))
     .catch(error => next(error));
 });
-
-
-////////////////////////////////////////
 
 module.exports = router;

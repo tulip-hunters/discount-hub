@@ -1,6 +1,6 @@
 <h1>Edit the product: {{product.name}}</h1>
 
-<form action="/products/{{product._id}}/edit" method="post" enctype="multipart/form-data">
+<form action="/products/{{product._id}}/edit" method="post">
     <label> Name:
         <input type="text" name="name" value="{{product.name}}" required />
     </label>
@@ -37,54 +37,11 @@
         </label>
 
 
-      <label>Upload file
+      {{!-- <label>Upload file
            <input type="file" name="imageUrl" />
-           {{!-- <input type="text" name="existingImage" hidden value="{{imageUrl}}"> --}}
-      </label>
+           <input type="text" name="existingImage" hidden value="{{imageUrl}}"> 
+      </label> --}}
 
 
         <button>Save changes</button>
 </form>
-
-
-
-{{!-- <h1>Edit the product: {{product.name}}</h1>
-
-<form action="/products/{{product._id}}/edit" method="post">
-    <label> Name:
-        <input type="text" name="name" value="{{product.name}}" />
-    </label>
-
-    <label> Description:
-        <textarea name="description" cols="30" rows="4"> </textarea>
-    </label>
-
-    <label> Discount valid until:
-        <input name="expirationDate" type="date"> </input>
-    </label>
-
-    <label> Regular price:
-        <input type="number" name="fullPrice" min="0.00" step=".01" />
-    </label>
-
-    <label> Price after discount:
-        <input type="number" name="discountPrice" min="0.00" step=".01" />
-    </label>
-
-    <label> Select a tag:
-
-        <input type="radio" value="food" name="tags">
-        <label for="html">food</label>
-        <input type="radio" value="non-food" name="tags">
-        <label for="html">non-food</label>
-
-        <label> Shop:
-            <select name="shop">
-                {{#each shops}}
-                <option value={{this._id}}>{{this.name}}</option>
-                {{/each}}
-            </select>
-        </label>
-
-        <button>Save changes</button>
-</form> --}}
