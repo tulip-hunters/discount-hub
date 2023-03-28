@@ -36,62 +36,62 @@ const products = [
 const shops = [
     {
         name: "Aldi",
-        image: "public/images/Aldi.png",
+        image: "Aldi.png",
         link: "https://www.aldi.nl/"
     },
     {
         name: "Albert Hijn",
-        image: "/public/images/Albert_Heijn_Logo.png",
+        image: "Albert_Heijn_Logo.png",
         link: "https://www.ah.nl/",
     },
     {
         name: "Coop",
-        image: "Aldi.png",
+        image: "",
         link: "https://www.coop.nl/",
     },
     {
         name: "Dirk",
-        image: "Aldi.png",
+        image: "Dirk.png",
         link: "https://www.dirk.nl/",
     },
     {
         name: "Deka Markt",
-        image: "Aldi.png",
+        image: "",
         link: "https://www.dekamarkt.nl/",
     },
     {
         name: "Jumbo",
-        image: "Aldi.png",
+        image: "jumbo.png",
         link: "https://www.jumbo.com/",
     },
     {
         name: "Lidl",
-        image: "Aldi.png",
+        image: "Lidl.png",
         link: "https://www.lidl.nl/",
     },
     {
         name: "Ekoplaza",
-        image: "Aldi.png",
+        image: "Ekoplaza.png",
         link: "https://www.ekoplaza.nl/",
     },
     {
         name: "Marqt",
-        image: "Aldi.png",
+        image: "Marqt.jpeg",
         link: "https://www.marqt.nl/",
     },
     {
         name: "Spar",
-        image: "Aldi.png",
+        image: "Spar.png",
         link: "https://www.spar.nl/",
     },
     {
         name: "Vomar",
-        image: "Aldi.png",
+        image: "Vomar.jpeg",
         link: "https://www.vomar.nl/",
     },
     {
         name: "other",
-        image: "Aldi.png",
+        image: "",
         link: "https://www.ironhack.com/",
     },
 ];
