@@ -1,47 +1,69 @@
-<h1>Edit the product: {{product.name}}</h1>
+<div class="container">
+    <div class="row">
+        <div class="card col-12" >
 
-<form action="/products/{{product._id}}/edit" method="post">
-    <label> Name:
-        <input type="text" name="name" value="{{product.name}}" required />
-    </label>
+            <div class="card-header">
+                <h1>Edit Product: {{product.name}}</h1>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <form action="/products/{{product._id}}/edit" method="post">
+                        <label> Name:
+                            <input type="text" name="name" value="{{product.name}}" required />
+                        </label>
+                </li>
+                <li class="list-group-item">
+                    <label> Description:
+                        <textarea name="description" cols="30" rows="4" value="{{product.description}}"
+                            required>{{product.description}} </textarea>
+                    </label>
+                </li>
+                <li class="list-group-item">
+                    <label> Discount valid until:
+                        <input name="expirationDate" type="date" value="{{product.expirationDate}}" required> Current
+                        data: {{product.expirationDate}}</input>
+                    </label>
 
-    <label> Description:
-        <textarea name="description" cols="30" rows="4" value="{{product.description}}" required>{{product.description}} </textarea>
-    </label>
+                </li>
+                <li class="list-group-item">
+                    <label> Regular price: €
+                        <input type="number" name="fullPrice" min="0.00" step=".01" value="{{product.fullPrice}}"
+                            required />
+                    </label>
 
-    <label> Discount valid until:
-        <input name="expirationDate" type="date" value="{{product.expirationDate}}" required> Current data: {{product.expirationDate}}</input>
-    </label>
+                </li>
+                <li class="list-group-item">
+                    <label> Price after discount: €
+                        <input type="number" name="discountPrice" min="0.00" step=".01"
+                            value="{{product.discountPrice}}" required />
+                    </label>
 
-    <label> Regular price:
-        <input type="number" name="fullPrice" min="0.00" step=".01" value="{{product.fullPrice}}" required/>
-    </label>
+                </li>
+                <li class="list-group-item">
+                    <label> Select a tag:
 
-    <label> Price after discount:
-        <input type="number" name="discountPrice" min="0.00" step=".01" value="{{product.discountPrice}}" required/>
-    </label>
-
-    <label> Select a tag:
-
-        <input type="radio" value="food" name="tags" required>
-        <label for="html">food</label>
-        <input type="radio" value="non-food" name="tags" required>
-        <label for="html">non-food</label>
-
-        <label> Shop:
-            <select name="shop" required>
-                {{#each shops}}
-                <option value={{this._id}}>{{this.name}}</option>
-                {{/each}}
-            </select>
-        </label>
+                        <input type="radio" value="food" name="tags" required>
+                        <label for="html">food</label>
+                        <input type="radio" value="non-food" name="tags" required>
+                        <label for="html">non-food</label>
 
 
-      {{!-- <label>Upload file
-           <input type="file" name="imageUrl" />
-           <input type="text" name="existingImage" hidden value="{{imageUrl}}"> 
-      </label> --}}
+                </li>
+                <li class="list-group-item">
+                    <label> Shop:
+                        <select name="shop" required>
+                            {{#each shops}}
+                            <option value={{this._id}}>{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                    </label>
 
+                </li>
+                <li class="list-group-item"><button type="button" class="btn btn-light">Save changes</button></li>
+                <li><a href="/products/{{this._id}}" class="btn btn-primary">Back</a></li>
+            </ul>
+        </div>
+        </form>
 
-        <button>Save changes</button>
-</form>
+    </div>
+</div>

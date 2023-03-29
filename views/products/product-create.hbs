@@ -1,29 +1,45 @@
-<h1>Product create page</h1>
+<div class="container">
+    <div class="row">
 
-<form method="POST" action="/products" enctype="multipart/form-data">
+<div class="card">
+  <div class="card-header">
+   <h1>Create a new Product</h1>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+        <form method="POST" action="/products" enctype="multipart/form-data">
 
     <label> Product name:
         <input type="text" name="name" required />
     </label>
 
-    <label> Description:
+    </li>
+    <li class="list-group-item">
+         <label> Description:
         <textarea name="description" cols="30" rows="4" required> </textarea>
     </label>
 
-    <label> Discount valid until:
+    </li>
+    <li class="list-group-item">
+          <label> Discount valid until:
         <input name="expirationDate" type="date" required> </input>
     </label>
 
-
-    <label> Regular price:
+    </li>
+    <li class="list-group-item">
+         <label> Regular price: €
         <input type="number" name="fullPrice" min="0.00" step=".01" required/>
     </label>
-
-    <label> Price after discount:
+        
+    </li>
+    <li class="list-group-item">
+        <label> Price after discount: €
         <input type="number" name="discountPrice" min="0.00" step=".01" required />
     </label>
-
-    <label> Select a tag:
+        
+    </li>
+    <li class="list-group-item">
+         <label> Select a tag:
      
                 <input type="radio" value="food" name="tags" required>
                 <label for="html">food</label>
@@ -31,18 +47,27 @@
                 <label for="html">non-food</label>
      
     </label>
-
-    <label> Select a shop:
+        
+    </li>
+    <li class="list-group-item">
+          <label> Select a shop:
         <select name="shop" required>
             {{#each shops}}
                 <option value={{this._id}}>{{this.name}}</option>
             {{/each}}
         </select>
     </label>
-
-      <label>Upload file
+        
+    </li>
+    <li class="list-group-item">
+         <label>Upload file:
            <input type="file" name="imageUrl" required/>
       </label>
-
-    <button type="submit"> Create </button>
+    </li>
+     <li> <button type="submit" class="btn btn-primary"> Create </button></li>
+  </ul>
+</div>
 </form>
+
+</div>
+</div>

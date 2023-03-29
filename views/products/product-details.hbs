@@ -1,29 +1,23 @@
 <h1>Product details page</h1>
 
 <section>
-        <h2>{{this.name}}</h2>
-        <p>
-            Shop: {{this.shop.name}} <br />
-            Description: {{this.description}} <br />
-            Regular Price: {{this.fullPrice}} <br />
-            Price after discount: {{this.discountPrice}} <br />
-            Valid until: {{this.expirationDate}} <br />
-            Cathegory: {{this.tags}} <br />
-            <img src=" {{this.imageUrl}}" alt="producr image"/>
+    <h2>{{this.name}}</h2>
+    <p>
+        Shop: {{this.shop.name}} <br />
+        Description: {{this.description}} <br />
+        Regular Price : €{{this.fullPrice}} <br />
+        Price after discount: €{{this.discountPrice}} <br />
+        Valid until: {{this.expirationDate}} <br />
+        Cathegory: {{this.tags}} <br />
+        <img src=" {{this.imageUrl}}" alt="producr image" />
+    </p>
 
-
-   
-            <a href="/products/{{this._id}}/edit">Edit</a>
-        </p>
-
-        <form action="/products/{{_id}}/delete" method="POST">
-            <button>Delete</button>
-        </form>
-
-
-        <p>
-
-        </p>
+    <p>
+        <a href="/products/{{this._id}}/edit" class="btn btn-success">Edit</a>
+    </p>
+    <form action="/products/{{_id}}/delete" method="POST">
+        <button type="button" class="btn btn-danger">Delete</button>
+    </form>
 </section>
 
-<a href="/products">Back</a>
+<a href="/products" class="btn btn-primary">Back</a>
