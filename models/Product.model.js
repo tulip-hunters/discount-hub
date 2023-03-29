@@ -11,7 +11,10 @@ const productSchema = new Schema(
         description: String,
         fullPrice: Number,
         discountPrice: Number,
-        expirationDate: Date,
+        expirationDate: {
+            type: Date,
+            get: expirationDate => expirationDate.toDateString()
+        },
         tags: {
             type: String,
             enum: ['food', 'non-food' ],
