@@ -22,8 +22,10 @@ const productSchema = new Schema(
         }
     },
     {
-        timestamps: true
+        // timestamps: true
+    
     },
+   
 );
 
 const Product = model ('Product', productSchema);
