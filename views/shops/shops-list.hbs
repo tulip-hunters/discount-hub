@@ -1,20 +1,26 @@
 <h1>Shops list page</h1>
+<div class="container">
+<div class="row">
 
+{{#each shops}}
+<div class="col-12 col-md-6 col-lg-4 col-xl-3">
+    <div class="card">
+  <img src="/images/{{this.image}}" class="card-img-top" alt="product image">
+  <div class="card-body">
+    {{!-- <p class="card-title fw-bolder text-center">{{this.name}} </p> --}}
+      <p class="text-center fw-semibold">Visit official page: <a class="fw-semibold"  href="{{this.link}}">{{this.name}}</a></p>
+  </div>
+</div>
+</div>
+{{/each}}
+</div>
+</div>
+{{!-- </div>
+</div>
 {{#each shops}}
   <section>
     <h2>{{this.name}}</h2>
-    {{!-- <a href="{{this.link}}"> --}}
       <img src="/images/{{this.image}}" alt="{{this.name}}" style="width:200px;height:auto;">
-    {{!-- </a> --}}
     <p><a href="{{this.link}}">{{this.link}}</a></p>
   </section>
-{{/each}}
-
-
-
-
-
-
-
-{{!-- img for the logo --}}
-{{!-- <img src="/images/{{imageFile}}" alt="{{title}}" /> --}}
+{{/each}} --}}

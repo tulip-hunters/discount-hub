@@ -1,4 +1,4 @@
-<div id="login-form">
+{{!-- <div id="login-form">
   <h2>Log In to Add new Product!</h2>
   <form action="/auth/login" method="POST">
 
@@ -18,7 +18,52 @@
 
 
     {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
+    <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
-</div>
+</div> --}}
+
+<section>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center mb-5">
+        <h2 class="heading-section">Log In</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="login-wrap p-0">
+          <h3 class="mb-4 text-center">Have an account?</h3>
+          <form action="/auth/login" method="POST" class="signin-form">
+            {{!-- <div class="form-group">
+              <input type="text" class="form-control" name="username" placeholder="Username" />
+            </div> --}}
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" placeholder="Email" required />
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" name="password" placeholder="Password" required />
+              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+
+              </span>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="form-control btn btn-primary submit px-3">Log In</button>
+            </div>
+            <div class="form-group d-md-flex">
+
+            </div>
+          </form>
+
+          <div class="d-flex text-center">
+            <a href="/signup" class="form-control btn btn-primary submit px-3" role="button">If you don't have account:
+              SIGN UP</a>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
