@@ -38,12 +38,12 @@
               </a>
               <ul class="dropdown-menu small-nav-color">
                 {{#if currentUser}}
-                <div class="men">
-                <li><form class="dropdown-item" method="POST" action="/logout"><button>Logout</button></form></li>
+                
+                <li><form class="dropdown-item small-nav-color" method="POST" action="/logout"><button class="btn small btn-outline-danger">Logout</button></form></li>
                 {{else}}
                 <li><a class="dropdown-item small-nav-color" href="/signup">Register</a></li>
                 <li><a class="dropdown-item small-nav-color" href="/login">Login</a></li>
-                </div>
+               
                 {{/if}}
               </ul>
             </li>
