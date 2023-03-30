@@ -1,74 +1,86 @@
 <div class="container">
     <div class="row">
 
-<div class="card">
-  <div class="card-header text-bg-warning p-3">
-   <h1>Create a new Product</h1>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">
-        <form method="POST" action="/products" enctype="multipart/form-data">
+        <div class="card">
+            <div class="card-header text-bg-warning p-3 text-white">
+                <h1>Create a new Product</h1>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <form method="POST" action="/products" enctype="multipart/form-data">
 
-    <label> Product name:
-        <input type="text" name="name" required />
-    </label>
+                        <label> Product name:
+                            <input type="text" name="name" required />
+                        </label>
 
-    </li>
-    <li class="list-group-item">
-         <label> Description:
-        <textarea name="description" cols="30" rows="4" required> </textarea>
-    </label>
+                </li>
+                <li class="list-group-item">
+                    <label> Description:
+                        <textarea name="description" cols="30" rows="4" required> </textarea>
+                    </label>
 
-    </li>
-    <li class="list-group-item">
-          <label> Discount valid until:
-        <input name="expirationDate" type="date" required> </input>
-    </label>
+                </li>
+                <li class="list-group-item">
+                    <label> Discount valid until:
+                        <input name="expirationDate" type="date" required> </input>
+                    </label>
 
-    </li>
-    <li class="list-group-item">
-         <label> Regular price: €
-        <input type="number" name="fullPrice" min="0.00" step=".01" required/>
-    </label>
-        
-    </li>
-    <li class="list-group-item">
-        <label> Price after discount: €
-        <input type="number" name="discountPrice" min="0.00" step=".01" required />
-    </label>
-        
-    </li>
-    <li class="list-group-item">
-         <label> Select a tag:
-     
-                <input type="radio" value="food" name="tags" required>
-                <label for="html">food</label>
-                <input type="radio" value="non-food" name="tags" required>
-                <label for="html">non-food</label>
-     
-    </label>
-        
-    </li>
-    <li class="list-group-item">
-          <label> Select a shop:
-        <select name="shop" required>
-            {{#each shops}}
-                <option value={{this._id}}>{{this.name}}</option>
-            {{/each}}
-        </select>
-    </label>
-        
-    </li>
-    <li class="list-group-item">
-         <label>UPLOAD a FILE (supported formats: JPG, PNG, JPEG, GIF, TIFF, WEBP, PDF, RAW, AI):
-           <input type="file" name="imageUrl" accept=".png, .jpg, .jpeg, .gif, .tiff, .webp, .pdf, .raw, .ai" required/><br><br>
-           
-      </label>
-    </li>
-     <li> <button type="submit" class="btn btn-primary"> Create </button></li> <br>
-  </ul>
-</div>
-</form>
+                </li>
+                <li class="list-group-item">
+                    <label> Regular price: €
+                        <input type="number" name="fullPrice" min="0.00" step=".01" required />
+                    </label>
 
-</div>
+                </li>
+                <li class="list-group-item">
+                    <label> Price after discount: €
+                        <input type="number" name="discountPrice" min="0.00" step=".01" required />
+                    </label>
+
+                </li>
+                <li class="list-group-item">
+                    <label> Select a tag:
+
+                        <input type="radio" value="food" name="tags" required>
+                        <label for="html">food</label>
+                        <input type="radio" value="non-food" name="tags" required>
+                        <label for="html">non-food</label>
+
+                    </label>
+
+                </li>
+                <li class="list-group-item">
+                    <label> Select a shop:
+                        <select name="shop" required>
+                            {{#each shops}}
+                            <option value={{this._id}}>{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                    </label>
+
+                </li>
+                <li class="list-group-item">
+                    {{!-- <label>UPLOAD a FILE (supported formats: JPG, PNG, JPEG, GIF, TIFF, WEBP, PDF, RAW, AI):
+                        <input type="file" name="imageUrl"
+                            accept=".png, .jpg, .jpeg, .gif, .tiff, .webp, .pdf, .raw, .ai" required /><br><br>
+                    </label> --}}
+                    <div>
+                        <label for="formFileLg" class="form-label">UPLOAD a FILE (supported formats: JPG, PNG, JPEG,
+                            GIF, TIFF, WEBP, PDF,
+                            RAW, AI):</label>
+                        <input class="form-control form-control-lg" id="formFileLg" type="file" name="imageUrl"
+                            accept=".png, .jpg, .jpeg, .gif, .tiff, .webp, .pdf, .raw, .ai" required />
+                    </div>
+                </li>
+                <li>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="submit" class="btn btn-warning"> Create </button>
+                        <a href="/products" class="btn btn-outline-primary">Back</a>
+                    </div>
+                </li> <br>
+            </ul>
+        </div>
+        </form>
+
+    </div>
 </div>

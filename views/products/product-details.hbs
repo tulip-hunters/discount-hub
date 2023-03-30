@@ -1,33 +1,33 @@
-<h1>Product details</h1>
+{{!-- <h1>Product details</h1> --}}
 
-<div class="container px-4 px-lg-5 my-5">
-                <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{this.imageUrl}}" alt="product image"></div>
-                    <div class="col-md-6">
-                        <div class="fs-6 mb-1">Shop: {{this.shop.name}} </div>
-                        <div> <img style="width: 50px" class="img-fluid" src="/images/{{this.shop.image}}"></div>
-                        <h1 class="display-5 fw-bolder">{{this.name}}</h1>
-                        <div class="fs-5 mb-5">
-                            <span>Regular Price: € <span class="text-decoration-line-through"> {{this.fullPrice}}</span></span>
-                            <p class="fw-bold">Price after discount: €{{this.discountPrice}} </p>
-                                   <p class="small">Valid until: {{this.expirationDate}}</p> 
-        <p class="small">Cathegory: {{this.tags}} </p>
-                        </div>
-                        <p class="lead"> Description: {{this.description}} </p>
-                        <div class="d-flex">
-                             <form action="/products/{{_id}}/delete" method="POST">
-                            <button class="btn btn-danger flex-shrink-0 edit" type="submit">Delete</button>
-                            </form>
-                            <form action="/products/{{this._id}}/edit" method="GET">
-                            <button class="btn btn-success flex-shrink-0 edit" type="submit">Edit</button>
-                            </form>
-                             <form action="/products" method="GET">
-                            <button class="btn btn-primary flex-shrink-0 edit" type="submit">Back</button>
-                            </form>
-                            {{!-- <a href="/products/{{this._id}}/edit" class="btn btn-success flex-shrink-0">Edit</a>
-                            <a href="/products" class="btn btn-primary flex-shrink-0">Back</a> --}}
-                            
-                        </div>
-                    </div>
-                </div>
+<div class="container px-4 px-lg-5 my-5 text-white">
+    <div class="row gx-4 gx-lg-5 align-items-center">
+        <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{this.imageUrl}}" alt="product image"></div>
+        <div class="col-md-6">
+            <div class="fs-6 mb-1">Shop: {{this.shop.name}} </div>
+            <div> <img style="width: 50px" class="img-fluid" src="/images/{{this.shop.image}}"></div>
+            <h1 class="display-5 fw-bolder">{{this.name}}</h1>
+            <div class="fs-5 mb-5">
+                <span>Regular Price: € <span class="text-decoration-line-through"> {{this.fullPrice}}</span></span>
+                <p class="fw-bold">Price after discount: €{{this.discountPrice}} </p>
+                <p class="small">Valid until: {{this.expirationDate}}</p>
+                <p class="small">Cathegory: {{this.tags}} </p>
             </div>
+            <p class="lead"> Description: {{this.description}} </p>
+            <div class="d-flex">
+                <form action="/products/{{_id}}/delete" method="POST">
+                    <button class="btn btn-danger flex-shrink-0 edit" type="submit">Delete</button>
+                </form>
+                <form action="/products/{{this._id}}/edit" method="GET">
+                    <button class="btn btn-success flex-shrink-0 edit" type="submit">Edit</button>
+                </form>
+                <form action="/products" method="GET">
+                    <button class="btn btn-primary flex-shrink-0 edit" type="submit">Back</button>
+                </form>
+                {{!-- <a href="/products/{{this._id}}/edit" class="btn btn-success flex-shrink-0">Edit</a>
+                <a href="/products" class="btn btn-primary flex-shrink-0">Back</a> --}}
+
+            </div>
+        </div>
+    </div>
+</div>

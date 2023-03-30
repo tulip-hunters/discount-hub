@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row">
-        <div class="card col-12" >
+        <div class="card col-12">
 
-            <div class="card-header">
+            <div class="card-header p-3 mb-2 bg-success text-white">
                 <h1>Edit Product: {{product.name}}</h1>
             </div>
             <ul class="list-group list-group-flush">
@@ -59,8 +59,13 @@
                     </label>
 
                 </li>
-                <li class="list-group-item"><button type="submit" class="btn btn-light">Save changes</button></li>
-                <li><a href="/products/{{this._id}}" class="btn btn-primary">Back</a></li>
+                <li class="list-group-item">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="submit" class="btn btn-success">Save changes</button>
+                    <a href="/products/{{this._id}}" class="btn btn-outline-primary">Back</a>
+                      </div> 
+                        </li>
+                {{!-- <li><a href="/products/{{this._id}}" class="btn btn-primary">Back</a></li> --}}
             </ul>
         </div>
         </form>
