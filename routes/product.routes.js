@@ -15,7 +15,7 @@ router.get("/products", (req, res, next) => {
     .populate("shop")
     .then((productsArr) => {
       const data = {
-        products: productsArr,
+        products: productsArr.reverse(),
       };
       res.render("products/products-list", data);
     })
