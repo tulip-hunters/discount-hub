@@ -1,6 +1,7 @@
 <div class="text-center main-page">
 
   {{#if currentUser}}
+    <p class=" main-box text-white text-uppercase fs-2">Welcome {{currentUser.username}}! Nice to see you!</p>
   <div class="main-box">
     <p class="fs-5 text-white">We are a community that shares discounts in popular retail chains. Every cent saved
       counts!</p>
@@ -9,6 +10,7 @@
     <a href="/product/create" class="btn btn-outline-light btn-sm  col-12 col-md-3 ">Add new discount</a>
   </div>
   <div class="main-box">
+  
 
     {{else}}
     <div class="main-box">
