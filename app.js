@@ -35,7 +35,7 @@ const loggedInCheck = (req,res, next) => {
 }
 
 const indexRoutes = require("./routes/index.routes");
-app.use("/", indexRoutes);
+app.use("/", loggedInCheck, indexRoutes);
 
 app.use("/", loggedInCheck, require("./routes/index.routes"));
 app.use("/", loggedInCheck, require("./routes/auth.routes"));
