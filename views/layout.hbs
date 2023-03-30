@@ -1,23 +1,25 @@
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{appTitle}}</title>
- <link rel="stylesheet" href="/stylesheets/style.css" />
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-  </head>
-   
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>{{appTitle}}</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
 
-  <body class="container-xxl">
+</head>
+
+<body class="container-xxl">
 
   <header>
     <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid nav-color ">
-       <a class="navbar-brand fw-bold fs-1 text-warning " href="/">DiscountHUB</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand fw-bold fs-1 text-warning " href="/">DiscountHUB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon "></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -38,12 +40,15 @@
               </a>
               <ul class="dropdown-menu small-nav-color">
                 {{#if currentUser}}
-                
-                <li><form class="dropdown-item small-nav-color" method="POST" action="/logout"><button class="btn small btn-outline-danger">Logout</button></form></li>
+
+                <li>
+                  <form class="dropdown-item small-nav-color" method="POST" action="/logout"><button
+                      class="btn small btn-outline-danger">Logout</button></form>
+                </li>
                 {{else}}
                 <li><a class="dropdown-item small-nav-color" href="/signup">Register</a></li>
                 <li><a class="dropdown-item small-nav-color" href="/login">Login</a></li>
-               
+
                 {{/if}}
               </ul>
             </li>
@@ -51,20 +56,23 @@
         </div>
       </div>
     </nav>
-      </header>
-   
-
-    {{{body}}}
+  </header>
 
 
-    <script src="/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-  </body>
-   <footer>
-    <div class="footer-container">
+  {{{body}}}
+
+
+  <script src="/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+    crossorigin="anonymous"></script>
+</body>
+<footer>
+  <div class="footer-container">
     <div class="text-center p-3 text-white rounded" style="background-color: rgba(0, 0, 0, 0.4);">
-    © 2023 Created by Senem Osmanova & Bartek Dubinski / Ironhack Bootcamp Project
+      © 2023 Created by Senem Osmanova & Bartosz Dubinski / Ironhack Bootcamp Project
+    </div>
   </div>
-  </div>
-  </footer>
+</footer>
+
 </html>
