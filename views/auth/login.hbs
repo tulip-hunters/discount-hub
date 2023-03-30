@@ -8,6 +8,11 @@
       <div class="col-12 col-md-6">
         <div class="login-wrap p-0">
           <h3 class="fs-4 mb-4 text-center text-white">Login</h3>
+
+          {{#if errorMessage}}
+          <p class="text-white">{{errorMessage}}</p>
+          {{/if}}
+
           <form action="/auth/login" method="POST" class="signin-form">
             {{!-- <div class="form-group">
               <input type="text" class="form-control" name="username" placeholder="Username" />
@@ -30,7 +35,8 @@
           </form>
 
           <div class="d-flex text-center">
-            <a href="/signup" class="form-control btn btn-outline-info submit px-4" role="button">If you don't have account:
+            <a href="/signup" class="form-control btn btn-outline-info submit px-4" role="button">If you don't have
+              account:
               REGISTER</a>
 
           </div>
