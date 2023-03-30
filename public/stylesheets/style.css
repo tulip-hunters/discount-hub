@@ -12,9 +12,17 @@ a {
 h1 {
   color: 15px;
 }
+.nav-color {
+  background-color: #9FAAA1;
+  
+}
 
+.nav-link {
+  color: #DD962C;
+}
 .container-xxl {
   background-color: #f9f5d9;
+  
 }
 
 .navbar-brand {
@@ -40,3 +48,16 @@ h1 {
 .edit {
   margin: 3px 3px;
 }
+
+.single-shop {
+  padding: 10px;
+}
+
+.primary-lighter-hover {
+  color: #4285F4;
+  -webkit-transition: .4s;
+  transition: .4s; }
+.primary-lighter-hover:hover {
+  -webkit-transition: .4s;
+  transition: .4s;
+  color: #8ab4f8; }

@@ -1,27 +1,3 @@
-{{!-- <div id="login-form">
-  <h2>Log In to Add new Product!</h2>
-  <form action="/auth/login" method="POST">
-
-    <label> Username
-      <input type="text" name="username" placeholder="Your username" />
-    </label>
-
-    <label> Email
-      <input type="email" name="email" placeholder="Your email" />
-    </label>
-
-    <label> Password
-      <input type="password" name="password" placeholder="Your password" />
-    </label>
-
-    <button type="submit">Log In</button>
-
-
-    {{#if errorMessage}}
-    <p class="error">{{errorMessage}}</p>
-    {{/if}}
-  </form>
-</div> --}}
 
 <section>
   <div class="container">
@@ -39,16 +15,16 @@
               <input type="text" class="form-control" name="username" placeholder="Username" />
             </div> --}}
             <div class="form-group">
-              <input type="email" class="form-control" name="email" placeholder="Email" required />
+              <input type="email" class="form-control edit" name="email" placeholder="Email" required />
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" name="password" placeholder="Password" required />
+              <input type="password" class="form-control edit" name="password" placeholder="Password" required />
               <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 
               </span>
             </div>
             <div class="form-group">
-              <button type="submit" class="form-control btn btn-primary submit px-3">Log In</button>
+              <button type="submit" class="form-control btn btn-primary submit px-3 edit">Log In</button>
             </div>
             <div class="form-group d-md-flex">
 
