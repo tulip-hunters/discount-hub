@@ -14,17 +14,15 @@
   <body class="container-xxl">
 
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid nav-color">
-       <a class="navbar-brand fw-bold fs-1" href="/">DiscountHUB</a>
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid nav-color ">
+       <a class="navbar-brand fw-bold fs-1 text-warning " href="/">DiscountHUB</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon "></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav">
-            <li class="nav-item ">
-              <a class="nav-link active deep-orange-lighter-hover " aria-current="page" href="/">Home</a>
-            </li>
+
             <li class="nav-item">
               <a class="nav-link deep-orange-lighter-hover" href="/products">Products</a>
             </li>
@@ -36,7 +34,7 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                User Menu
+                Hello {{this.currentUser.username}}
               </a>
               <ul class="dropdown-menu">
                 {{#if currentUser}}
@@ -52,11 +50,17 @@
       </div>
     </nav>
       </header>
+   
 
     {{{body}}}
+
 
     <script src="/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
   </body>
-
+   <footer>
+    <div class="text-center p-3 text-white rounded" style="background-color: rgba(0, 0, 0, 0.4);">
+    © 2023 Created by Senem Osmanova & Bartek Dubinski / Ironhack Bootcamp Project
+  </div>
+  </footer>
 </html>
