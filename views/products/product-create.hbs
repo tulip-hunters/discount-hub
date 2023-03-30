@@ -2,7 +2,7 @@
     <div class="row">
 
 <div class="card">
-  <div class="card-header">
+  <div class="card-header text-bg-warning p-3">
    <h1>Create a new Product</h1>
   </div>
   <ul class="list-group list-group-flush">
@@ -60,11 +60,12 @@
         
     </li>
     <li class="list-group-item">
-         <label>Upload file:
-           <input type="file" name="imageUrl" required/>
+         <label>UPLOAD a FILE (supported formats: JPG, PNG, JPEG, GIF, TIFF, WEBP, PDF, RAW, AI):
+           <input type="file" name="imageUrl" accept=".png, .jpg, .jpeg, .gif, .tiff, .webp, .pdf, .raw, .ai" required/><br><br>
+           
       </label>
     </li>
-     <li> <button type="submit" class="btn btn-primary"> Create </button></li>
+     <li> <button type="submit" class="btn btn-primary"> Create </button></li> <br>
   </ul>
 </div>
 </form>
