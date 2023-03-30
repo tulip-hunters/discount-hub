@@ -1,21 +1,19 @@
-
 <section>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-6 text-center mb-5">
-        <h2 class="heading-section">Log In</h2>
+      <div class="col-12 col-md-6 text-center mb-5">
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-md-6 col-lg-4">
+      <div class="col-12 col-md-6">
         <div class="login-wrap p-0">
-          <h3 class="mb-4 text-center">Have an account?</h3>
+          <h3 class="fs-4 mb-4 text-center text-white">Login</h3>
           <form action="/auth/login" method="POST" class="signin-form">
             {{!-- <div class="form-group">
               <input type="text" class="form-control" name="username" placeholder="Username" />
             </div> --}}
             <div class="form-group">
-              <input type="email" class="form-control edit" name="email" placeholder="Email" required />
+              <input type="email" class="form-control edit text-white" name="email" placeholder="Email" required />
             </div>
             <div class="form-group">
               <input type="password" class="form-control edit" name="password" placeholder="Password" required />
@@ -32,8 +30,8 @@
           </form>
 
           <div class="d-flex text-center">
-            <a href="/signup" class="form-control btn btn-primary submit px-3" role="button">If you don't have account:
-              SIGN UP</a>
+            <a href="/signup" class="form-control btn btn-outline-info submit px-4" role="button">If you don't have account:
+              REGISTER</a>
 
           </div>
 
