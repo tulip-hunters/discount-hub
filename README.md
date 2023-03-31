@@ -77,3 +77,4 @@ discountGub is an application to create and share discounts in popular retail ch
 - [ ] User profile page
 - [ ] User can save product/shop to favorites
 - [ ] E-mail notification when a new product to favorite shop or category is added
+- [ ] Expired products move to other category automatically 
