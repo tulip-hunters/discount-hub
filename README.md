@@ -6,7 +6,7 @@ discountGub is an application to create and share discounts in popular retail ch
 
 **[discountHUB DEMO](https://discounthubnl.adaptable.app/)**
 ---
-### Instructions to run this app in my computer
+### Instructions to run this app on a computer
 1. Install dependencies (*npm install*)
 2. Create a .env file and add environment variables (add *PORT, SECRET KEY, CLOUDINARY_NAME, CLOUDINARY_KEY, CLOUDINARY_SECRET*)
 3. To run the application use *npm run dev*
