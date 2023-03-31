@@ -1,6 +1,12 @@
 # Project 2: Full-stack Web Application
 **Web Application created by Senem Osmanova and Bartosz Dubinski as a part of Full-stack Web Developer Bootcamp in Ironhack**
 
+discountGub is an application to create a share discounts in popular retail chains in the Netherlands. 
+
+
+[discountHUB DEMO](https://discounthubnl.adaptable.app/)
+
+---
 ### Technical Requirements
 1. Use Express as a foundation.
 2. Use Mongoose for models and database communication.
@@ -10,20 +16,50 @@
 4. Implement all CRUD actions on models other than users. You should have the Create, Read, Update and Delete features even if they aren’t all for the same model.
 6. Have a repo on GitHub.
 7. Have at least 1 commit per day that you worked on.
-8. Be deployed online using Heroku so that anybody could use your app.
+8. Be deployed online using Adaptable so that anybody could use your app.
 9. Responsive design is not a requirement, but it’s nice to have.
-
+---
 ## MVP
+### Deployment
+-[x] Application is deployed on Adaptable
+-[x] IMPORTANT: all tests in this checklist must be done on PRODUCTION.
 
-### Milestone 1
--[x] Brainstorm and select one project
--[x] Create organisation on GitHub
--[x] Initial setup
--[x] Check Life Share and work on one file simultaneously on Visual Studio Code
--[x] Create readme file 
+### Auth
+**SIGNUP / REGISTER**
+-[x] I can create an account
+-[x] (validation) If I try to create an account without required data (ex. without email. without password...), I receive proper feedback
+-[x] (validation) If I try to create an account with an email/username already taken, I receive proper feedback
 
-### Milestone 2
--[x] Create folders and files in VSC
--[x] Create models for user, product and shop
+**LOG-IN**
+-[x] I can login
+-[x] (validation) If I try to login without required fields, I receive proper feedback
+-[x] (validation) If I try to login with wrong credentials, I receive proper feedback
 
-### Milestone 3
+**LOG-OUT**
+-[x] As a logged-in user, I can logout
+
+### CRUD (ex. Recipe model)
+
+**CREATE**
+-[x] I can Create a resource
+-[x] (validation) If I try to create a resource without required data, I receive proper feedback
+-[x] (validation) If I try to create a resource with invalid data (ex. typing a string in a field where you expect a number), I receive proper feedback
+
+**READ**
+-[x] Display list of resources
+-[x] Display the details of a single resource
+
+**UPDATE**
+-[x] I can Update a resource
+-[x] The form to Update is pre-populated with the correct data
+-[x] (validation) same cases as "create" will probably apply
+
+**DELETE**
+-[x] I can DELETE a resource
+
+### Protected routes
+-[x]Some functionality is only available for logged-in users (ex. create, update, delete)
+
+### Bonus
+-[ ] I can not Update or Delete resources from other users (ie. I can only U+D if I am the owner of a resource)
+-[x] Test Responsive
