@@ -21,45 +21,45 @@ discountGub is an application to create a share discounts in popular retail chai
 ---
 ## MVP
 ### Deployment
--[x] Application is deployed on Adaptable
--[x] IMPORTANT: all tests in this checklist must be done on PRODUCTION.
+- [x] Application is deployed on Adaptable
+- [x] IMPORTANT: all tests in this checklist must be done on PRODUCTION.
 
 ### Auth
 **SIGNUP / REGISTER**
--[x] I can create an account
--[x] (validation) If I try to create an account without required data (ex. without email. without password...), I receive proper feedback
--[x] (validation) If I try to create an account with an email/username already taken, I receive proper feedback
+- [x] I can create an account
+- [x] (validation) If I try to create an account without required data (ex. without email. without password...), I receive proper feedback
+- [x] (validation) If I try to create an account with an email/username already taken, I receive proper feedback
 
 **LOG-IN**
--[x] I can login
--[x] (validation) If I try to login without required fields, I receive proper feedback
--[x] (validation) If I try to login with wrong credentials, I receive proper feedback
+- [x] I can login
+- [x] (validation) If I try to login without required fields, I receive proper feedback
+- [x] (validation) If I try to login with wrong credentials, I receive proper feedback
 
 **LOG-OUT**
--[x] As a logged-in user, I can logout
+- [x] As a logged-in user, I can logout
 
 ### CRUD (ex. Recipe model)
 
 **CREATE**
--[x] I can Create a resource
--[x] (validation) If I try to create a resource without required data, I receive proper feedback
--[x] (validation) If I try to create a resource with invalid data (ex. typing a string in a field where you expect a number), I receive proper feedback
+- [x] I can Create a resource
+- [x] (validation) If I try to create a resource without required data, I receive proper feedback
+- [x] (validation) If I try to create a resource with invalid data (ex. typing a string in a field where you expect a number), I receive proper feedback
 
 **READ**
--[x] Display list of resources
--[x] Display the details of a single resource
+- [x] Display list of resources
+- [x] Display the details of a single resource
 
 **UPDATE**
--[x] I can Update a resource
--[x] The form to Update is pre-populated with the correct data
--[x] (validation) same cases as "create" will probably apply
+- [x] I can Update a resource
+- [x] The form to Update is pre-populated with the correct data
+- [x] (validation) same cases as "create" will probably apply
 
 **DELETE**
--[x] I can DELETE a resource
+- [x] I can DELETE a resource
 
 ### Protected routes
--[x]Some functionality is only available for logged-in users (ex. create, update, delete)
+- [x]Some functionality is only available for logged-in users (ex. create, update, delete)
 
 ### Bonus
--[ ] I can not Update or Delete resources from other users (ie. I can only U+D if I am the owner of a resource)
--[x] Test Responsive
+- [ ] I can not Update or Delete resources from other users (ie. I can only U+D if I am the owner of a resource)
+- [x] Test Responsive
