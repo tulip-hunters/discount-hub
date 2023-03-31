@@ -112,9 +112,7 @@ router.post("/auth/login", isLoggedOut, (req, res, next) => {
     .then((user) => {
       // If the user isn't found, send an error message that user provided wrong credentials
       if (!user) {
-        res
-          .status(400)
-          .render("auth/login", { errorMessage: "Wrong e-mail." });
+        res.status(400).render("auth/login", { errorMessage: "Wrong e-mail." });
         return;
       }
 
