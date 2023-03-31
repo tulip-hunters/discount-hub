@@ -58,7 +58,7 @@ discountGub is an application to create a share discounts in popular retail chai
 - [x] I can DELETE a resource
 
 ### Protected routes
-- [x]Some functionality is only available for logged-in users (ex. create, update, delete)
+- [x] Some functionality is only available for logged-in users (ex. create, update, delete)
 
 ### Bonus
 - [ ] I can not Update or Delete resources from other users (ie. I can only U+D if I am the owner of a resource)
