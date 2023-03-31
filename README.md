@@ -66,5 +66,14 @@ discountGub is an application to create and share discounts in popular retail ch
 - [x] Some functionality is only available for logged-in users (ex. create, update, delete)
 
 ### Bonus
-- [ ] I can not Update or Delete resources from other users (ie. I can only U+D if I am the owner of a resource)
 - [x] Test Responsive
+
+### Further improvments
+- [ ] Add more categories to products
+- [ ] Update images when editing a product
+- [ ] Geolocation for nearest shop
+- [ ] Having multiple filter options (show products from one shop, category, etc.)
+- [ ] Users are able to comment/like products
+- [ ] User profile page
+- [ ] User can save product/shop to favorites
+- [ ] E-mail notification when a new product to favorite shop or category is added
