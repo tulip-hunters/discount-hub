@@ -1,10 +1,15 @@
 # Project 2: Full-stack Web Application
-**Web Application created by Senem Osmanova and Bartosz Dubinski as a part of Full-stack Web Developer Bootcamp in Ironhack**
+**Web Application created by Senem N. Osmanova and Bartosz Dubinski as a part of Full-stack Web Developer Bootcamp in Ironhack**
 
-discountGub is an application to create a share discounts in popular retail chains in the Netherlands. 
+discountGub is an application to create and share discounts in popular retail chains in the Netherlands. 
 
 
-[discountHUB DEMO](https://discounthubnl.adaptable.app/)
+**[discountHUB DEMO](https://discounthubnl.adaptable.app/)**
+---
+### Instructions to run this app in my computer
+1. Install dependencies (*npm install*)
+2. Create a .env file and add environment variables (add *PORT, SECRET KEY, CLOUDINARY_NAME, CLOUDINARY_KEY, CLOUDINARY_SECRET*)
+3. To run the application use *npm run dev*
 
 ---
 ### Technical Requirements
